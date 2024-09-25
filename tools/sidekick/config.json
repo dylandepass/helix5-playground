@@ -28,8 +28,7 @@
     {
       "id": "prod-badge",
       "title": "Prod",
-      "isBadge": true,
-      "badgeVariant": "magenta"
+      "isBadge": true
     }
   ]
 }
