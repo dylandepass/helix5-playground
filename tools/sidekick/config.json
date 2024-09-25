@@ -29,6 +29,11 @@
       "id": "prod-badge",
       "title": "Prod",
       "isBadge": true
+    },
+    {
+      "title": "Stage2",
+      "badgeVariant": "green",
+      "isBadge": true
     }
   ]
 }
