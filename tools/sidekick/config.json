@@ -24,6 +24,12 @@
       "passConfig": true,
       "environments": [ "preview", "live", "edit" ],
       "includePaths": ["**.docx**"]
+    },
+    {
+      "id": "prod-badge",
+      "title": "Prod",
+      "isBadge": true,
+      "badgeVariant": "magenta"
     }
   ]
 }
