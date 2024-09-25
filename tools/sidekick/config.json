@@ -31,7 +31,6 @@
       "isBadge": true
     },
     {
-      "id": "stage-badge",
       "title": "Stage",
       "badgeVariant": "green",
       "isBadge": true
