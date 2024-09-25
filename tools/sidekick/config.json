@@ -1,6 +1,5 @@
 {
   "project": "WKND",
-  "previewHost": "main--helix8-playground--dylandepass.aem.page",
   "plugins": [
     {
       "id": "library",
