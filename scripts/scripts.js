@@ -34,6 +34,8 @@ const AUDIENCES = {
   'returning-visitor': () => !!localStorage.getItem('franklin-visitor-returning'),
 };
 
+console.log('this is a test');
+
 window.hlx.plugins.add('rum-conversion', {
   url: '/plugins/rum-conversion/src/index.js',
   load: 'lazy',
