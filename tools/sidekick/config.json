@@ -1,5 +1,6 @@
 {
   "project": "WKND",
+  "reviewHost": "github-reviews.com",
   "plugins": [
     {
       "id": "library",
