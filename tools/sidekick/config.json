@@ -4,7 +4,7 @@
   "plugins": [
     {
       "id": "library",
-      "title": "Library",
+      "title": "My Library",
       "environments": [ "edit" ],
       "url": "https://main--wknd--hlxsites.hlx.live/tools/sidekick/library.html",
       "includePaths": [ "**.docx**" ]
@@ -20,7 +20,7 @@
     },
     {
       "id": "generate-variations",
-      "title": "Generate Variations",
+      "title": "Generate Variationsss",
       "url": "https://experience.adobe.com/aem/generate-variations",
       "passConfig": true,
       "environments": [ "preview", "live", "edit" ],
@@ -28,7 +28,7 @@
     },
     {
       "id": "prod-badge",
-      "title": "Prod",
+      "title": "Prods",
       "isBadge": true
     }
   ]
