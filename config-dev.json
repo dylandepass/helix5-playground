@@ -1,0 +1,69 @@
+{
+  "data": [
+      {
+          "key": "adobe-edge-helper-url",
+          "value": "123"
+      },
+      {
+          "key": "cj-token-id",
+          "value": "345"
+      },
+      {
+          "key": "bloomreach-auth-key",
+          "value": "abc"
+      },
+      {
+          "key": "bloomreach-account-id",
+          "value": "112"
+      },
+      {
+          "key": "bloomreach-base-url",
+          "value": "324"
+      },
+      {
+          "key": "bloomreach-domain-key",
+          "value": "43"
+      },
+      {
+          "key": "bloomreach-debug",
+          "value": "true"
+      },
+      {
+          "key": "commerce-endpoint",
+          "value": "https://catalog-service-sandbox.adobe.io/graphql"
+      },
+      {
+          "key": "commerce-core-endpoint",
+          "value": "https://www.example.com/graphql"
+      },
+      {
+          "key": "commerce-website-id",
+          "value": "1"
+      },
+      {
+          "key": "commerce-store-id",
+          "value": "1"
+      },
+      {
+          "key": "commerce-store-view-id",
+          "value": "1"
+      },
+      {
+          "key": "commerce-website-name",
+          "value": "Main Website"
+      },
+      {
+          "key": "commerce-store-name",
+          "value": "Lighting"
+      },
+      {
+          "key": "commerce-store-view-name",
+          "value": "Default Store View"
+      }
+  ],
+  "columns": [
+      "key",
+      "value"
+  ],
+  ":type": "sheet"
+}
