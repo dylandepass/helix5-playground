@@ -1,6 +1,4 @@
-{
-  "data": [
-      {
+[      {
           "key": "adobe-edge-helper-url",
           "value": "123"
       },
@@ -58,7 +56,6 @@
       },
       {
           "key": "commerce-store-view-name",
-          "value": "Default Store View"
+          "value": "Default Store View2"
       }
-  ]
-}
+    ]
