@@ -60,10 +60,5 @@
           "key": "commerce-store-view-name",
           "value": "Default Store View"
       }
-  ],
-  "columns": [
-      "key",
-      "value"
-  ],
-  ":type": "sheet"
+  ]
 }
