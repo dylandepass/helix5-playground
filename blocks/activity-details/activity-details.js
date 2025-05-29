@@ -1,5 +1,5 @@
 /**
- * test
+ * testing
  * @param {HTMLElement} block
  */
 export default function decorate(block) {
