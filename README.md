@@ -86,3 +86,5 @@ WKND_URL=https://main--wknd--hlxsites.hlx.live ITERATIONS=1000 npm run generate-
 1. Install the [Helix CLI](https://github.com/adobe/helix-cli): `npm install -g @adobe/helix-cli`
 1. Start Helix Pages Proxy: `hlx up` (opens your browser at `http://localhost:3000`)
 1. Open the `{repo}` directory in your favorite IDE and start coding :)
+
+Update
