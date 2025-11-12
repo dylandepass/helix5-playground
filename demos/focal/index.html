@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Image Cropping - Focal Point Demo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Smart Image Cropping</h1>
+            <p class="subtitle">Set a focal point and see how it adapts across different viewports</p>
+        </header>
+
+        <main>
+            <!-- Upload Section -->
+            <section class="section upload-section">
+                <h2>Upload</h2>
+                <div class="upload-zone" id="uploadZone">
+                    <div class="upload-content">
+                        <svg class="upload-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="17 8 12 3 7 8"></polyline>
+                            <line x1="12" y1="3" x2="12" y2="15"></line>
+                        </svg>
+                        <p class="upload-text">Drag & drop an image here</p>
+                        <p class="upload-subtext">or</p>
+                        <button class="btn-primary" id="selectFileBtn">Choose File</button>
+                        <input type="file" id="fileInput" accept="image/*" hidden>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Focal Point Selection Section -->
+            <section class="section focal-section" id="focalSection" style="display: none;">
+                <h2>Set Focal Point</h2>
+                <p class="section-description">Click or drag on the image to set the focal point</p>
+
+                <div class="focal-container">
+                    <div class="image-wrapper" id="imageWrapper">
+                        <img id="previewImage" alt="Preview">
+                        <div class="focal-point" id="focalPoint">
+                            <div class="focal-point-inner"></div>
+                        </div>
+                    </div>
+
+                    <div class="coordinates-display">
+                        <div class="coordinate-item">
+                            <span class="coordinate-label">X:</span>
+                            <span class="coordinate-value" id="coordX">50%</span>
+                        </div>
+                        <div class="coordinate-item">
+                            <span class="coordinate-label">Y:</span>
+                            <span class="coordinate-value" id="coordY">50%</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Controls Section -->
+            <section class="section controls-section" id="controlsSection" style="display: none;">
+                <h2>Controls</h2>
+
+                <div class="control-group">
+                    <label class="control-label">Object Fit Mode:</label>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="objectFit" value="cover" checked>
+                            <span>Cover</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="objectFit" value="contain">
+                            <span>Contain</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="objectFit" value="fill">
+                            <span>Fill</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="objectFit" value="none">
+                            <span>None</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="objectFit" value="scale-down">
+                            <span>Scale Down</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="button-group">
+                    <button class="btn-secondary" id="copyCssBtn">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                        </svg>
+                        Copy CSS
+                    </button>
+                    <button class="btn-secondary" id="copyDataBtn">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                        </svg>
+                        Copy Data Attribute
+                    </button>
+                    <button class="btn-secondary btn-reset" id="resetBtn">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="1 4 1 10 7 10"></polyline>
+                            <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path>
+                        </svg>
+                        Reset
+                    </button>
+                </div>
+            </section>
+
+            <!-- Preview Section -->
+            <section class="section previews-section" id="previewsSection" style="display: none;">
+                <h2>Live Previews</h2>
+
+                <div class="previews-grid">
+                    <div class="preview-container">
+                        <h3 class="preview-title">Desktop Preview</h3>
+                        <p class="preview-dimensions">1200 × 600 px</p>
+                        <div class="preview-box desktop-preview">
+                            <img id="desktopPreview" alt="Desktop preview">
+                        </div>
+                    </div>
+
+                    <div class="preview-container">
+                        <h3 class="preview-title">Mobile Preview</h3>
+                        <p class="preview-dimensions">375 × 667 px</p>
+                        <div class="preview-box mobile-preview">
+                            <img id="mobilePreview" alt="Mobile preview">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Built with vanilla JavaScript • No dependencies • Client-side only</p>
+        </footer>
+    </div>
+
+    <div class="toast" id="toast"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>
